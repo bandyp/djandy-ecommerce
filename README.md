@@ -67,3 +67,5 @@ Take a walk through the reminder app [here](https://djandy_ecommerce.herokuapp.c
 
 ## Credits
 Code institue mentor Suen Owonikoko
+
+[![Build Status](https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master)](https://travis-ci.org/bandyp/djandy-ecommerce)
