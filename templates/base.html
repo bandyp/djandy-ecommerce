@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load bootstrap_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
 
 <body>
     <!-- Fixed masthead -->
-    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top justify-content-between">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,11 +31,29 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Bali Blog</a></li>
-                    {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li>
+                    <form action="{% url 'search' %}" method="get" class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Bali Jewellery
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Rings</a>
+                            <a class="dropdown-item" href="#">Bracelettes</a>
+                            <a class="dropdown-item" href="#">Earrings</a>
+                            <a class="dropdown-item" href="#">Necklaces</a>
+                            <a class="dropdown-item" href="#">Harmony Bells</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#">Contact Us</a></li>
+                    <li class="nav-item"><a href="{% url 'get_posts' %}">Bali Blog</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item"><a href="{% url 'profile' %}">Profile</a></li>
+                    <li class="nav-item">
                         <a href="{% url 'view_cart' %}">
                             <i class="fa fa-shipping-cart"></i>Cart
                             {% if product_count > 0 %}
@@ -42,10 +61,10 @@
                             {% endif %}
                         </a>
                     </li>
-                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    <li class="nav-item"><a href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{% url 'registration' %}">Register</a></li>
-                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li class="nav-item"><a href="{% url 'registration' %}">Register</a></li>
+                    <li class="nav-item"><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -60,24 +79,6 @@
     {% endif %}
     <div class="container">
         <div class="row">
-            <div class="sidebar col-sm-3">
-                <div class="display col">
-                    <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="q">
-                        <button type="search">Search</button>
-                    </form>
-                </div>
-                <div class="side-menu col">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Rings</a></li>
-                        <li><a href="#">Bracelettes</a></li>
-                        <li><a href="#">Earings</a></li>
-                        <li><a href="#">Necklaces</a></li>
-                        <li><a href="#">Harmony Bells</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="col-sm-9">
                 {% block content %} {% endblock %}
             </div>

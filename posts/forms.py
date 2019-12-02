@@ -1,4 +1,4 @@
-from djang0 import forms
+from django import forms
 from .models import Post
 
 class BlogPostForm(forms.ModelForm):
