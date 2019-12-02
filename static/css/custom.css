@@ -21,6 +21,11 @@ footer {
     margin-top: 30px;
 }
 
+.bali {
+    font-family: 'Pacifico', cursive;
+    font-size: x-large;
+}
+
 .icon-bar {
     background-color: #fff;
 }
@@ -73,4 +78,8 @@ caption p {
 
 .product-description {
     min-height: 40px;
+}
+
+.jewelery-dropdown {
+    margin-top: 5px;
 }
