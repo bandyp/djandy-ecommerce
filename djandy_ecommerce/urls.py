@@ -20,6 +20,7 @@ from accounts import urls as urls_accounts
 from products import urls as urls_products
 from cart import urls as urls_cart
 from contact import urls as urls_contact
+from posts import urls as urls_posts
 from search import urls as urls_search
 from checkout import urls as urls_checkout
 from products.views import all_products
@@ -36,6 +37,6 @@ urlpatterns = [
     url(r'^contact/', include(urls_contact)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
-    url(r'^posts/', include('posts.urls')),
+    url(r'^posts/', include(urls_posts)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]
