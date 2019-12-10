@@ -2,13 +2,19 @@ from django.shortcuts import render
 from django.views.generic import View
 from django.http import HttpResponse
 from .forms import ContactForm
+from django.core.mail import send_mail
+
 
 # Create your views here.
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            return HttpResponse('Thanks for contacting us, we will reply shortly')
+            sender_name = form.cleaned_data['name']
+            sender_email = form.cleaned_data['email']
+
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
     else:
         form = ContactForm()
         

@@ -41,14 +41,14 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="{% url 'search' %}" name="q">Rings</a></li>
+                            <li><a href="#" name="q">Rings</a></li>
                             <li><a href="#">Bracelets</a></li>
                             <li><a href="#">Earrings</a></li>
                             <li><a href="#">Necklaces</a></li>
                             <li><a href="#">Harmony Bells</a></li>
                         </ul> 
                     </li>
-                    <li class="nav-item"><a href="#">Contact Us</a></li>
+                    <li class="nav-item"><a href="{% url 'contact' %}">Contact Us</a></li>
                     <li class="nav-item"><a href="{% url 'get_posts' %}">Bali Blog</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item"><a href="{% url 'profile' %}">Profile</a></li>
