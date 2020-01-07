@@ -1,12 +1,16 @@
 # Bali Silver
 
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
-and selling some of the more unique items.
+and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
 
 ## UX
 ![Bali Silver](#)
 
-After opening the stylish home page the user is invited to login or register to see the impressive display of crafted items.
+Open on the product page the user is invited register from a tab in the navigation bar. After a seemless registration, 
+all options appear at the top of the screen. Allowing the user to read blogs of fellow users and create their own. 
+They can contact the admin via the 'contact us' page, or read more about the company selling the products by clicking the 'About us" tab. 
+
+Naturally, they can search and buy products too.
 
 [Click here](library/BaliSilver.pdf) to see the mock ups.
 

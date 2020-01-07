@@ -121,6 +121,10 @@ caption p {
 }
 
 .input-group {
-    width: 100px;
+    width: 130px;
+}
+
+.detail {
+    padding-left: 0;
 }
 
