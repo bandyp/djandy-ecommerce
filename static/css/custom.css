@@ -1,11 +1,15 @@
 form {
     width: 50%;
-} 
+}
 
 body {
     font-family: Arial;
     padding-top: 100px;
-    background-color: #faf1f0;
+    background-color: white;
+}
+
+.min_height {
+    min-height: 40vh;
 }
 
 footer {
@@ -95,12 +99,12 @@ caption p {
     display: block;
 }
 
-.img-circle{
-    width:100px;
-    height: 100px; 
+.img-circle {
+    width: 100px;
+    height: 100px;
 }
 
-.img-blogpost{
+.img-blogpost {
     height: 300px;
     width: auto;
 }
@@ -127,4 +131,3 @@ caption p {
 .detail {
     padding-left: 0;
 }
-

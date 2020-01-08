@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 from accounts import urls as urls_accounts
 from accounts.views import index, logout, login, registration, user_profile
+from home.views import about
 from products import urls as urls_products
 from cart import urls as urls_cart
 from contact import urls as urls_contact
@@ -39,6 +40,7 @@ urlpatterns = [
     url(r'^profile/', user_profile, name="profile"),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
+    url(r'^home/', about, name='about'),
     url(r'^contact/', include(urls_contact)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
