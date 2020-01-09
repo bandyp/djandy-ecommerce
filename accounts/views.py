@@ -1,8 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from .models import Profile
+from .forms import ProfileForm
 
 
 def index(request):
@@ -65,3 +67,18 @@ def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
+    
+def edit_profile(request, pk=None):
+    """
+    create a view that allows to edit a profile
+    """
+
+    profile = get_object_or_404(Profile, pk=pk) if pk else None
+    if request.method == "POST":
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            profile = form.save()
+            return redirect(user_profile, profile.pk)
+    else:
+        form = ProfileForm(instance=profile)
+        return render(request, 'profileform.html', {'form': form})

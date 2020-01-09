@@ -25,7 +25,7 @@ def post_detail(request, pk):
 
 def create_or_edit_post(request, pk=None):
     """
-    create a view that alows to create or edit a post 
+    create a view that allows to create or edit a post 
     """
 
     post = get_object_or_404(Post, pk=pk) if pk else None
