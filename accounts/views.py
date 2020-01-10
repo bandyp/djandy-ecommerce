@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from .models import Profile
 from .forms import ProfileForm
+from django.utils import timezone
 
 
 def index(request):

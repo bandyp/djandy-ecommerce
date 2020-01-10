@@ -29,6 +29,7 @@ footer {
 .bali {
     font-family: 'Pacifico', cursive;
     font-size: x-large;
+    color: blue;
 }
 
 .icon-bar {
@@ -135,3 +136,4 @@ caption p {
 .cart_button {
     margin-top: 5px;
 }
+

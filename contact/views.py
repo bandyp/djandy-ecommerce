@@ -17,6 +17,7 @@ def contact(request):
             message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.success(request, "Thankyou for your request. We will be in touch shortly.")
+            return render(request, 'message.html', {'form': form})
             
     else:
         form = ContactForm()
