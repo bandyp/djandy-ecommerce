@@ -63,23 +63,29 @@ def registration(request):
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
         "registration_form": registration_form})
-        
-def user_profile(request):
-    """The user's profile page"""
+
+"""        
+def user_profile(request, pk):
+    
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
-    
+"""
+def user_profile(request, pk):
+    """The user's profile page"""
+    user = get_object_or_404(Profile, pk=pk)
+    return render(request, "profile.html", {'user': user})
+
 def edit_profile(request, pk=None):
     """
     create a view that allows to edit a profile
     """
 
-    profile = get_object_or_404(Profile, pk=pk) if pk else None
+    user = get_object_or_404(Profile, pk=pk) if pk else None
     if request.method == "POST":
-        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        form = ProfileForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
-            profile = form.save()
-            return redirect(user_profile, profile.pk)
+            user = form.save()
+            return redirect(user_profile, user.pk)
     else:
-        form = ProfileForm(instance=profile)
+        form = ProfileForm(instance=user)
         return render(request, 'profileform.html', {'form': form})
