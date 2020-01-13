@@ -3,9 +3,12 @@
 {% load bootstrap_tags %}
 
 <!-- adds cart template to base -->
+
+{% block page_title %}{{ user }}'s Cart{% endblock %}
+
+{% block page_heading %}{{ user }}'s Cart{% endblock %}
 {% block content %}
-<h1>Your Cart</h1>
-<hr>
+
 <div class="row row-flex min_height">
     <!-- shows product panels for items in cart -->
     {% for item in cart_items %}

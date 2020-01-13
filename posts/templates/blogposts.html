@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
+
+{% block page_title %}Bali Silver Blog{% endblock %}
+{% block page_heading %}Bali Blog{% endblock %}
+
 {% block content %}
+
+
 <!-- Template to show all abbreviated blogposts -->
-<h1>Bali Blog</h1>
-<hr>
+
 <div class="row">
     <div class="col">
         <a href="{% url 'new_post' %}" class="btn btn-primary newPost">Add a post</a>
@@ -14,7 +19,7 @@
                 <a class="story-img" href="#">
                     <img src="/media/img/profile_2.jpg" class="img-circle">
                 </a>
-                <p><span class="boldtext">Author:</span>Andy</p>
+                <p><span class="boldtext">Author:</span>{{ user }}</p>
             </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.title }}</h3>

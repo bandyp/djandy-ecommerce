@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
+{% block page_title %}Contact Bali Silver{% endblock %}
 
+{% block page_heading %}Contact Us{% endblock %}
 {% block content %}
 <!-- calls up contact page template -->
-<h1>Contact Us</h1>
 <form method="post">
     {% csrf_token %}
     {{ form | as_bootstrap }}

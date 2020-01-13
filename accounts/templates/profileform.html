@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 
+{% block page_title %}Edit {{ user }}'s Profile{% endblock %}
+{% block page_heading %}Edit {{ user }}'s Profile{% endblock %}
+<hr>
+
 {% block content %}
 
-    <h1>New Post</h1>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}

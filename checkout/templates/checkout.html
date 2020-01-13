@@ -12,10 +12,11 @@
     
 </script>
 {% endblock %}
+{% block page_title %}Checkout page{% endblock %}
 
+{% block page_heading %}Checkout{% endblock %}
 {% block content %}
-<h1>Checkout</h1>
-<hr>
+
 <!-- gets cart items -->
 <div class="row row-flex">
     {% for item in cart_items %}

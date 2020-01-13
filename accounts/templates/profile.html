@@ -5,8 +5,6 @@
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 
 {% block content %}
-<h1>Your Account</h1>
-<hr>
 <!-- option to edit the users profile -->
 <div class="row">
     <div class="col">
@@ -19,7 +17,7 @@
         <a class="story-img" href="#">
             <img src="/media/img/profile_2.jpg" class="img-circle">
         </a>
-        <p>Andy</p>
+        <p>{{ user }}</p>
     </div>
     <div class="col-md-10 col-sm-9">
         <div class="row">
