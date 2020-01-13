@@ -43,6 +43,7 @@ class UserRegistrationForm(UserCreationForm):
         return password2
         
 class ProfileForm(forms.ModelForm):
+    """ form used to edit users details """
     class Meta:
         model = Profile
         fields = ('name', 'about_me', 'image', 'nationality')

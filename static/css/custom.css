@@ -1,3 +1,5 @@
+/* styling to body  */
+
 form {
     width: 50%;
 }
@@ -12,6 +14,20 @@ body {
     min-height: 40vh;
 }
 
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* styling to footer  */
+
 footer {
     margin-top: 40px;
     padding-top: 40px;
@@ -22,8 +38,11 @@ footer {
     color: black;
 }
 
-.side-menu {
-    margin-top: 30px;
+
+/* styling to nav bars  */
+
+.nav-style {
+    background-color: #b6f038;
 }
 
 .bali {
@@ -36,22 +55,8 @@ footer {
     background-color: #fff;
 }
 
-.accountform {
-    padding-top: 20px;
-}
 
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
+/* styling to products  */
 
 .product {
     background-size: contain;
@@ -65,18 +70,6 @@ footer {
 caption p {
     word-wrap: break-word;
 }
-
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
 .panel-default {
     border-color: transparent;
     padding: 0 10px;
@@ -91,9 +84,8 @@ caption p {
     min-height: 40px;
 }
 
-.jewelery-dropdown {
-    margin-top: 5px;
-}
+
+/* styling to other apps  */
 
 .story-img {
     margin-top: 25%;
@@ -121,10 +113,6 @@ caption p {
     margin-left: 10px;
 }
 
-.nav-style {
-    background-color: #b6f038;
-}
-
 .input-group {
     width: 130px;
 }
@@ -136,4 +124,19 @@ caption p {
 .cart_button {
     margin-top: 5px;
 }
+.accountform {
+    padding-top: 20px;
+}
 
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}

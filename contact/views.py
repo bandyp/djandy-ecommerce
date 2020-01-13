@@ -5,9 +5,8 @@ from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
 
-
-# Create your views here.
 def contact(request):
+    # calls up form and sends email, sends a message to template to confirm message sent
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():

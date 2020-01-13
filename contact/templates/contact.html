@@ -3,8 +3,8 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-
-<h2>Contact Us</h2>
+<!-- calls up contact page template -->
+<h1>Contact Us</h1>
 <form method="post">
     {% csrf_token %}
     {{ form | as_bootstrap }}

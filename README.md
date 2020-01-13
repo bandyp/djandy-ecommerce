@@ -20,27 +20,27 @@ Anyone who is on the hunt for uniques Balinese sounveniers.
 ### User Stories
 
 ## Features
-Account setup
-Admin
-Cart
-Payment system
-Blog
+Account setup - once the initial account is setup the user can then edit their details through the profile page.
+Admin - the super user can add go into the admi page to add/edit products and accounts
+Cart - only when th euser has registered and logged in can they add items to their cart.
+Payment system - Using stripe the user is invited to add card details for payment. They will recieve an email as confirmation.
+Blog - Users can also add their experience in Bali, jewelery from bali or using this site to the blog page.
 
 ## Technology Used
 * [HTML](https://www.w3schools.com/html/) - for the structure of the content of the page
 * [CSS3](https://www.w3schools.com/css/) - for making small adjustments to the materialize framework
 * [Javascript](https://www.javascript.com/) - to initialise some components on the Materialize framework
-* [Balsamiq](https://balsamiq.com/wireframes/) - for the wireframe
-* [Git](https://git-scm.com/) - for version control
-* [GitHub](https://github.com/) - to host the repository
-* [GitHup Pages](https://pages.github.com/) - Website hosting.
-* [Heroku](https://heroku.com) - to deploy the app
-* [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/) - for interaction with the front end
+* [Balsamiq](https://www.balsamiq.com/wireframes/) - for the wireframe
+* [Git](https://www.git-scm.com/) - for version control
+* [GitHub](https://www.github.com/) - to host the repository
+* [GitHup Pages](https://www.pages.github.com/) - Website hosting.
+* [Heroku](https://www.heroku.com) - to deploy the app
+* [Flask-Pymongo](https://www.flask-pymongo.readthedocs.io/en/latest/) - for interaction with the front end
 * [Python](https://www.python.org/) - for back end implementation
-* [Bootstrap]
-* [Django]
-* [swipe]
-* [Travis]
+* [Bootstrap](https://www.getbootstrap.com/)
+* [Django](https://www.djangoproject.com/) - framework used to build the e commerce site
+* [stripe](https://www.stripe.com/gb/) - used for the payment system
+* [Travis](https://www.travis-ci.org/) - for testing
 
 ## Testing
 
@@ -67,7 +67,7 @@ To deploy your own version:
 * Open your IDE
 * Type 'git clone https://github.com/bandyp/djandy_ecommerce.git' in the terminal window of the root directory
 
-Take a walk through the reminder app [here](https://djandy_ecommerce.herokuapp.com/)
+Take a walk through the Bali Silver app [here](https://djandy_ecommerce.herokuapp.com/)
 
 ## Credits
 Code institue mentor Suen Owonikoko

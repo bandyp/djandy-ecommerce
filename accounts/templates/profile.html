@@ -5,12 +5,15 @@
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 
 {% block content %}
+<h1>Your Account</h1>
+<hr>
+<!-- option to edit the users profile -->
 <div class="row">
     <div class="col">
-        <a href="#" class="btn btn-default newPost">Edit Profile</a><a href="{% url 'edit_profile' profile.id %}" class="btn btn-default">Edit Profile</a>
+        <a href="#" class="btn btn-primary newPost">Edit Profile</a><a href="{% url 'edit_profile' profile.id %}" class="btn btn-primary">Edit Profile</a>
     </div>
 </div>
-<hr>
+<!-- calls up users details -->
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
         <a class="story-img" href="#">

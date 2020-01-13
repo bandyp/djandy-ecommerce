@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- shows template of a single full blog post -->
+<h1>Bali Blog</h1>
+<hr>
     <div class="row">
         <div class="col-md-2 col-sm-3 text-center">
             <a class="story-img" href="#">
@@ -18,8 +21,8 @@
                     <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                     <p><span class="boldtext">Views:</span> {{post.views}}</p>
                     <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                    <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
-                    <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
+                    <a href="{% url 'get_posts' %}" class="btn btn-primary">Back to Blog</a>
+                    <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a>
                     <hr>
                 </div>
             </div>
