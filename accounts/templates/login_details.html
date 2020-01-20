@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+{% block page_title %}{{ user }}'s Login Details{% endblock %}
+{% block page_heading %}{{ user }}'s Login Details{% endblock %}
+
+{% block content %}
+<p>{{ profile.email }}</p>
+
+{% endblock %}

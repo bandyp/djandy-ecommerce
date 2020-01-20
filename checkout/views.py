@@ -41,7 +41,7 @@ def checkout(request):
                     amount=int(total * 100),
                     currency="GBP",
                     description=request.user.email,
-                    card=payment_form.cleaned_data['stripe_id']
+                    card = payment_form.cleaned_data['stripe_id'],
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
@@ -49,7 +49,7 @@ def checkout(request):
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}
-                return redirect(reverse('products'))
+                return redirect(request, "products")
             else:
                 messages.error(request, "Unable to take payment")
         else:

@@ -5,13 +5,13 @@ $(function() {
             number: $("#id_credit_card_number").val(),
             expMonth: $("#id_expiry_month").val(), 
             expYear: $("#id_expiry_year").val(),
-            cvc: $("#id_cvv").val(),
+            cvc: $("#id_cvv").val()
         };
     
-    Stripe.cretaeToken(card, function(status, response) {
+    Stripe.createToken(card, function(status, response) {
         if (status === 200) {
             $("#credit-card-errors").hide();
-            $("#id_stripe_id").val(response);
+            $("#id_stripe_id").val(response.id);
             
             //prevent the credit card detaisl from being submitted to server
             $("#id_credit_card_number").removeAttr('name');

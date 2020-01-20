@@ -18,7 +18,7 @@
 <body>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top justify-content-between">
-        <div class="container-fluid nav-style">
+        <div class="container-fluid nav-style navbar-dark bg-success">
             <div class="navbar-header">
                 <!-- collapse navbar on smaller screens -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- Brand heading -->
-                <a class="navbar-brand bali" href="/">Bali Silver</a>
+                <a class="navbar-brand bali" href="\">Bali Silver</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <!-- Search bar -->
@@ -40,6 +40,7 @@
                 </form>
                 <!-- Other navigation buttons -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="{% url 'products' %}">Our Jewellery</a></li>
                     <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
                     <!-- navigation buttons available only when user is authorised -->
                     {% if user.is_authenticated %}
@@ -85,11 +86,11 @@
         </div>
     </div>
     <!-- Fixed footer at bottom of page -->
-    <footer class="fixed-bottom">
+    <footer class="fixed-bottom text">
         <div class="container">
             <div class="row footer">
                 <div class="col">
-                    <p><h3>Bali Silver</h3></p>
+                    <p class="bali text-primary">Bali Silver</p>
                     <p class='payment-icons'>
                         <a href="https://www.visa.com"><i class="fab fa-cc-visa fa-2x"></i></a>
                         <a href="https://www.mastercard.com"><i class="fab fa-cc-mastercard fa-2x"></i></a>
@@ -97,7 +98,7 @@
                         <a href="https://www.americanexpress.com"><i class="fab fa-cc-amex fa-2x"></i></a>
                         <a href="https://www.stripe.com"><i class="fab fa-stripe fa-3x pay-icon"></i></a>
                     </p>
-                    <p>Contact us at BaliSilver@example.com</p>
+                    <p class="bali text-primary">Contact us at BaliSilver@example.com</p>
                     <p class='SoMe-icons'>
                         <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x"></i></a>
                         <a href="https://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
@@ -105,7 +106,7 @@
                         <a href="https://www.pinterest.com"><i class="fab fa-pinterest fa-2x"></i></a>
                         <a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x"></i></a>
                     </p>
-                    <p>Copywrite 2019 Andrew Phillips</p>
+                    <p class="bali text-primary">Copywrite 2019 Andrew Phillips</p>
                 </div>
             </div>
         </div>

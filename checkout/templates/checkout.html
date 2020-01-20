@@ -8,9 +8,9 @@
 <script type="text/javascript">
     //<![CDATA[
     Stripe.publishableKey = '{{ publishable }}';
-    //]]
-    
+    //]]>
 </script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}
 {% block page_title %}Checkout page{% endblock %}
 

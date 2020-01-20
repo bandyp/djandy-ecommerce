@@ -39,16 +39,15 @@ footer {
 }
 
 
-/* styling to nav bars  */
+/* styling to nav bars */
 
 .nav-style {
-    background-color: #b6f038;
+    background-color: bg-success;
 }
-
 .bali {
     font-family: 'Pacifico', cursive;
     font-size: x-large;
-    color: blue;
+    /* color: blue; */
 }
 
 .icon-bar {
