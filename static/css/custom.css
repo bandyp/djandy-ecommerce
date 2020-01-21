@@ -28,13 +28,21 @@ body {
 
 /* styling to footer  */
 
+a {
+    color: black;
+}
+
 footer {
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
     border-top: 1px solid #ededed;
-    background-color: #f495b8;
+    background-color: green;
     text-align: center;
+    font-size: 15px;
+}
+
+.footer_text {
     color: black;
 }
 
@@ -42,12 +50,17 @@ footer {
 /* styling to nav bars */
 
 .nav-style {
-    background-color: bg-success;
+    background-color: green;
+    color: blue;
 }
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
 .bali {
     font-family: 'Pacifico', cursive;
-    font-size: x-large;
-    /* color: blue; */
+    /* font-size: x-large; */
 }
 
 .icon-bar {

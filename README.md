@@ -12,7 +12,7 @@ They can contact the admin via the 'contact us' page, or read more about the com
 
 Naturally, they can search and buy products too.
 
-[Click here](library/BaliSilver.pdf) to see the mock ups.
+[Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
 
 ## Users
 Anyone who is on the hunt for uniques Balinese sounveniers. 

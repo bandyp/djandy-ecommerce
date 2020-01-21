@@ -37,10 +37,9 @@ def adjust_cart(request, id):
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
-"""
 def empty_cart(request, id):
-    cart = cart(request)
-    product = get_object_or_404(Product, id=product_id)
-    cart.remove(product)
+    print(request.POST)
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
+    cart.remove(quantity)
     return redirect(reverse('view_cart'))
-"""
