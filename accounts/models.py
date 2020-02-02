@@ -9,8 +9,8 @@ class Profile(models.Model):
     """
     The users profile information
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, default='')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
+    name = models.CharField(max_length=100)
     about_me = models.TextField()
     nationality = models.CharField(max_length=50, blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
