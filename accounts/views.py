@@ -74,18 +74,21 @@ def user_profile(request, pk):
     
     user = get_object_or_404(Profile, pk=pk)
     return render(request, "profile.html", {'user': user})
-"""
+
 
 def user_profile(request):
-    """The user's profile page"""
+    
+     
+    The user's profile page 
+    
+
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
 
 def edit_profile(request, pk=None):
-    """
+    
     create a view that allows to edit a profile
-    """
-
+    
     user = get_object_or_404(Profile, pk=pk) if pk else None
     if request.method == "POST":
         form = ProfileForm(request.POST, request.FILES, instance=user)
@@ -94,4 +97,6 @@ def edit_profile(request, pk=None):
             return redirect(user_profile, user.pk)
     else:
         form = ProfileForm(instance=user)
+        
         return render(request, 'profileform.html', {'form': form})
+    """     

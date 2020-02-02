@@ -6,8 +6,8 @@ and selling some of the more unique items. Particularly the world renowned silve
 ## UX
 ![Bali Silver](#)
 
-Open on the product page the user is invited register from a tab in the navigation bar. After a seemless registration, 
-all options appear at the top of the screen. Allowing the user to read blogs of fellow users and create their own. 
+Open on the home page, which gives a small taste of what the website offers, the user is invited register from a tab in the navigation bar. 
+After a seemless registration, all options appear at the top of the screen. Allowing the user to read blogs of fellow users and create their own. 
 They can contact the admin via the 'contact us' page, or read more about the company selling the products by clicking the 'About us" tab. 
 
 Naturally, they can search and buy products too.
@@ -15,16 +15,23 @@ Naturally, they can search and buy products too.
 [Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
 
 ## Users
-Anyone who is on the hunt for uniques Balinese sounveniers. 
+Anyone who is on the hunt for unique Balinese jewellery. 
 
 ### User Stories
+A couple who may have visited Bali but didn't end up buying some silver jewellery can do so here knowing thats its authentic products.
+
+A business which already sells unique and rare hand crafted jewellery can top up their own selection by going through the Bali Silver website.
+
+A buyer for a large department store may not even know of the unique offerings which come from Bali, 
+by visiting the Bali Silver website they can test their own market by purchasing throug here. 
+
 
 ## Features
 Account setup - once the initial account is setup the user can then edit their details through the profile page.
-Admin - the super user can add go into the admi page to add/edit products and accounts
-Cart - only when th euser has registered and logged in can they add items to their cart.
+Admin - the super user can add go into the admin page to add/edit products and accounts
+Cart - only when the user has registered and logged in can they add items to their cart.
 Payment system - Using stripe the user is invited to add card details for payment. They will recieve an email as confirmation.
-Blog - Users can also add their experience in Bali, jewelery from bali or using this site to the blog page.
+Blog - Users can also add their experience in Bali, jewellery from Bali by using this site to the blog page.
 
 ## Technology Used
 * [HTML](https://www.w3schools.com/html/) - for the structure of the content of the page
@@ -45,9 +52,6 @@ Blog - Users can also add their experience in Bali, jewelery from bali or using 
 ## Testing
 
 ### Manual Tests
-
-
-### Automated Tests
 * Chrome Developer Tools - to ensure all screen sizes responded correctly
 * W3C HTML & CSS Validation - used to test HTML and CSS
 

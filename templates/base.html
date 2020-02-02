@@ -43,14 +43,13 @@
                 </form>
                 <!-- Other navigation buttons -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a text-primary href="{% url 'products' %}">Our Jewellery</a></li>
                     <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item"><a text-primary href="{% url 'products' %}">Our Jewellery</a></li>
                     <!-- navigation buttons available only when user is authorised -->
                     {% if user.is_authenticated %}
                     </li>
-                    <li class="nav-item"><a href="{% url 'contact' %}">Contact Us</a></li>
                     <li class="nav-item"><a href="{% url 'get_posts' %}">Bali Blog</a></li>
-                    <li class="nav-item"><a href="{% url 'profile' %}">Profile</a></li>
+                    <li class="nav-item"><a href="{% url 'contact' %}">Contact Us</a></li>
                     <li class="nav-item">
                         <a href="{% url 'view_cart' %}">
                             <i class="glyphicon glyphicon-shopping-cart"></i> Cart
@@ -91,7 +90,7 @@
     <!-- Fixed footer at bottom of page -->
     <footer class="fixed-bottom text">
         <div class="container">
-            <div class="row footer footer_text">
+            <div class="row footer">
                 <div class="col">
                     <p class="footer_text">Bali Silver</p>
                     <p class='payment-icons footer_text'>

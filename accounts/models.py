@@ -10,11 +10,14 @@ class Profile(models.Model):
     The users profile information
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, default='')
     about_me = models.TextField()
     nationality = models.CharField(max_length=50, blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(default='default.png', upload_to='img')
+
+    def __str__(self):
+        return f'{self.user.username} Profile'
 
 """    
 @receiver(post_save, sender=User)

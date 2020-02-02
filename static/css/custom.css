@@ -1,7 +1,7 @@
 /* styling to body  */
 
-form {
-    width: 50%;
+.carousel-caption {
+    color: black;
 }
 
 body {
@@ -60,7 +60,6 @@ footer {
 
 .bali {
     font-family: 'Pacifico', cursive;
-    /* font-size: x-large; */
 }
 
 .icon-bar {
