@@ -50,6 +50,7 @@
                     </li>
                     <li class="nav-item"><a href="{% url 'get_posts' %}">Bali Blog</a></li>
                     <li class="nav-item"><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li class="nav-item"><a href="{% url 'profile' %}">Your Profile</a></li>
                     <li class="nav-item">
                         <a href="{% url 'view_cart' %}">
                             <i class="glyphicon glyphicon-shopping-cart"></i> Cart
@@ -78,7 +79,7 @@
     </div>
     {% endif %}
     <!-- other templates for nav buttons shown in this container -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm">
                 <h1>{% block page_heading %}{% endblock %}</h1>
@@ -92,7 +93,7 @@
         <div class="container">
             <div class="row footer">
                 <div class="col">
-                    <p class="footer_text">Bali Silver</p>
+                    <a class="footer_text bali" href="\">Bali Silver</a>
                     <p class='payment-icons footer_text'>
                         <a href="https://www.visa.com"><i class="fab fa-cc-visa fa-2x"></i></a>
                         <a href="https://www.mastercard.com"><i class="fab fa-cc-mastercard fa-2x"></i></a>
