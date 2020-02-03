@@ -85,10 +85,16 @@ caption p {
     border-color: transparent;
     padding: 0 10px;
     box-shadow: 5px 10px 18px #888888;
+    margin: 1rem;
+}
+
+.display {
+    margin-top: 2rem;
 }
 
 .panel-body {
     min-height: 100%;
+    margin-top: 1rem;
 }
 
 .product-description {

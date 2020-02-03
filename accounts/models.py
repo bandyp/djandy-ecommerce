@@ -9,7 +9,7 @@ class Profile(models.Model):
     """
     The users profile information
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, default='')
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     about_me = models.TextField()
     nationality = models.CharField(max_length=50, blank=True, null=True)
@@ -28,7 +28,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
-
+    
     def __unicode__(self):
         return self.title
 

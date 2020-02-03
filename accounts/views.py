@@ -69,22 +69,22 @@ def user_profile(request, pk):
     
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
-"""
+
 def user_profile(request, pk):
     
     user = get_object_or_404(Profile, pk=pk)
     return render(request, "profile.html", {'user': user})
-
 """
+@login_required
 def user_profile(request):
     
-   
+    """
     The user's profile page 
-    
+    """
 
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
-"""
+
 def edit_profile(request, pk=None):
     """
     create a view that allows to edit a profile
