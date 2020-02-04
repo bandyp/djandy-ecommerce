@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm 
 from .models import Profile
 from .forms import ProfileForm
 from django.utils import timezone
@@ -75,20 +75,22 @@ def user_profile(request, pk):
     user = get_object_or_404(Profile, pk=pk)
     return render(request, "profile.html", {'user': user})
 """
+"""
 @login_required
 def user_profile(request):
     
-    """
+    
     The user's profile page 
-    """
+    
 
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
-
+"""
+"""
 def edit_profile(request, pk=None):
-    """
+    
     create a view that allows to edit a profile
-    """
+    
     user = get_object_or_404(Profile, pk=pk) if pk else None
     if request.method == "POST":
         form = ProfileForm(request.POST, request.FILES, instance=user)
@@ -99,4 +101,19 @@ def edit_profile(request, pk=None):
         form = ProfileForm(instance=user)
         
         return render(request, 'profileform.html', {'form': form})
-     
+"""
+@login_required
+def profile(request):
+    """
+    u_form = UserUpdateForm()
+    """
+    p_form = ProfileUpdateForm()
+    
+    context = {
+        """
+        'u_form': u_form,
+        """
+        'p_form': p_form
+    }
+    
+    return render(request, 'profile.html', context)
