@@ -16,7 +16,7 @@ class Profile(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(default='default.png', upload_to='img')
 
-    def __str__(self):
+    def __unicode__(self):
         return f'{self.user.username} Profile'
 
 
