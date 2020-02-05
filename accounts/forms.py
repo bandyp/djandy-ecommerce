@@ -45,16 +45,16 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('name', 'about_me', 'image', 'nationality')
-"""        
+        
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
     
     class Meta:
         model = User
         fields = ('username', 'email')
-"""
+
 class ProfileUpdateForm(forms.ModelForm):
-    
+    email = forms.EmailField()
     class Meta:
         model = Profile
         fields = ('image', 'name', 'about_me', 'nationality')

@@ -5,12 +5,7 @@
 {% block page_heading %}{{ user }}'s Profile{% endblock %}
 
 {% block content %}
-<!-- option to edit the users profile -->
-<div class="row">
-    <div class="col">
-        <a href="#" class="btn btn-primary newPost">Edit Profile</a>
-    </div>
-</div>
+
 <!-- calls up users details -->
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
@@ -35,6 +30,11 @@
             </div>
         </div>
     </div>
+    <!-- option to edit the users profile -->
+    <form method="POST">
+        {% csrf_token %} {{ p_form | as_bootstrap }}
+        <button class="btn btn-outline-info" type="submit">Update</button>
+    </form>
 </div>
 <hr>
 

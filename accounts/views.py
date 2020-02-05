@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm, UserUpdateForm
 from django.utils import timezone
 
 
@@ -102,16 +102,16 @@ def edit_profile(request, pk=None):
 """
 @login_required
 def profile(request):
-    """
-    u_form = UserUpdateForm()
-    """
-    p_form = ProfileUpdateForm()
-    
-    context = {
-        """
-        'u_form': u_form,
-        """
-        'p_form': p_form
-    }
-    
-    return render(request, 'profile.html', context)
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+        messages.success(request, f"Your account has been updated")
+        return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+        
+    return render(request, 'profile.html', {'p_form': p_form, 'u_form': u_form})
