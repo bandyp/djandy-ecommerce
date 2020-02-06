@@ -31,8 +31,8 @@
         </div>
     </div>
     <!-- option to edit the users profile -->
-    <form method="POST">
-        {% csrf_token %} {{ p_form | as_bootstrap }}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{ p_form | as_bootstrap }}{{ u_form | as_bootstrap }}
         <button class="btn btn-outline-info" type="submit">Update</button>
     </form>
 </div>

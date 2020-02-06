@@ -19,8 +19,8 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
         
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
         
         img = Image.open(self.image.path)
         
@@ -31,7 +31,7 @@ class Profile(models.Model):
         
         
 
-
+"""
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
@@ -43,5 +43,5 @@ def save_user_profile(sender, instance, **kwargs):
     
     def __str__(self):
         return self.title
-
+"""
     
