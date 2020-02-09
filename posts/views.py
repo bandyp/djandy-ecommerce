@@ -10,7 +10,6 @@ def get_posts(request):
     """
 
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    ordering = ('-date_posted')
     
     return render(request, "blogposts.html", {'posts': posts})
 
@@ -31,6 +30,7 @@ def create_or_edit_post(request, pk=None):
     """
 
     post = get_object_or_404(Post, pk=pk) if pk else None
+    
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():

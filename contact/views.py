@@ -10,6 +10,7 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            
             sender_name = form.cleaned_data['name']
             sender_email = form.cleaned_data['email']
 
@@ -17,6 +18,23 @@ def contact(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.success(request, "Thankyou for your request. We will be in touch shortly.")
             return render(request, 'message.html', {'form': form})
-    form = ContactForm()
-        
+    form = ContactForm(initial={'name': 'name.instance', 'email':'user.instance'}, auto_id=False)
+    print(form)       
     return render(request, 'contact.html', {'form': form})
+"""    
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+        messages.success(request, f"Your account has been updated")
+        return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+        
+    return render(request, 'profile.html', {'p_form': p_form, 'u_form': u_form})
+"""

@@ -6,9 +6,12 @@
 {% block page_heading %}Contact Us{% endblock %}
 {% block content %}
 <!-- calls up contact page template -->
-<form method="POST">
+
+<form method="POST" enctype="multipart/form-data">
+
     {% csrf_token %}
     {{ form | as_bootstrap }}
+    
     <input class="btn btn-primary" type="submit" value="Submit">
 </form>
 
