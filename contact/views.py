@@ -4,11 +4,14 @@ from django.http import HttpResponse
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
+from accounts.models import Profile
+from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm, UserUpdateForm
+from django.contrib.auth.models import User
 
 def contact(request):
     # calls up form and sends email, sends a message to template to confirm message sent
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = ContactForm(request.POST, instance=request.user)
         if form.is_valid():
             
             sender_name = form.cleaned_data['name']
@@ -18,7 +21,7 @@ def contact(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.success(request, "Thankyou for your request. We will be in touch shortly.")
             return render(request, 'message.html', {'form': form})
-    form = ContactForm(initial={'name': 'name.instance', 'email':'user.instance'}, auto_id=False)
+    form = ContactForm(initial={'name': 'instance', 'email':'instance'}, auto_id=False)
     print(form)       
     return render(request, 'contact.html', {'form': form})
 """    
