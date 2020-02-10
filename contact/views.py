@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from django.views.generic import View
 from django.http import HttpResponse
 from .forms import ContactForm
@@ -6,8 +9,10 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from accounts.models import Profile
 from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm, UserUpdateForm
-from django.contrib.auth.models import User
 
+
+
+@login_required
 def contact(request):
     # calls up form and sends email, sends a message to template to confirm message sent
     if request.method == 'POST':
