@@ -19,12 +19,12 @@ def add_to_cart(request, id):
     request.session['cart'] = cart
     return redirect(reverse('products'))
 
-
+"""
 def adjust_cart(request, id):
-    """
+    
     Adjust the quantity of the specified product to the specified
     amount
-    """
+    
     print(request.POST)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
@@ -42,4 +42,37 @@ def empty_cart(request, id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
     cart.remove(quantity)
+    request.session['cart'] = cart
     return redirect(reverse('view_cart'))
+"""
+    
+def cart_action(request, id):
+    if '_amend' in request.POST:
+        """
+        Adjust the quantity of the specified product to the specified
+        amount
+        """
+        print(request.POST)
+        quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('cart', {})
+
+        if quantity > 0:
+            cart[id] = quantity
+        else:
+            cart.pop(id)
+        
+        request.session['cart'] = cart
+        return redirect(reverse('view_cart'))
+    elif "_delete" in request.POST:
+        """
+        Delete the quantity of the specified product
+        """
+        print(request.POST)
+        quantity = int(request.POST.get('quantity'))
+        cart = request.session.get('cart', {})
+        cart[id] = 0
+        cart.pop(id)
+       
+        request.session['cart'] = cart
+        return redirect(reverse('view_cart'))
+
