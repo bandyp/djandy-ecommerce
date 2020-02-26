@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 from .models import Profile
 
-
 class UserLoginForm(forms.Form):
     """Form to be used to log users in"""
 
