@@ -75,6 +75,6 @@ def profile(request):
         return redirect('profile')
     else:
         u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
+        p_form = ProfileUpdateForm(instance=request.user)
         
     return render(request, 'profile.html', {'p_form': p_form, 'u_form': u_form})
