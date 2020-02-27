@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
@@ -27,23 +27,7 @@ def contact(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.success(request, "Thankyou for your request. We will be in touch shortly.")
             return render(request, 'message.html', {'form': form})
-    form = ContactForm(initial={'username': instance.get_username(), 'email': instance}, auto_id=False)
+    form = ContactForm(initial={'username': instance.get_username(), 'email': instance.email}, auto_id=False)
     print(form)       
     return render(request, 'contact.html', {'form': form})
-"""    
-@login_required
-def profile(request):
-    if request.method == 'POST':
-        u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-        if u_form.is_valid() and p_form.is_valid():
-            u_form.save()
-            p_form.save()
-        messages.success(request, f"Your account has been updated")
-        return redirect('profile')
-    else:
-        u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
-        
-    return render(request, 'profile.html', {'p_form': p_form, 'u_form': u_form})
-"""
+

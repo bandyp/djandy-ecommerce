@@ -69,7 +69,8 @@ def profile(request):
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user)
         if u_form.is_valid() and p_form.is_valid():
-            UserRegistrationForm.user = request.user
+            u_form.username = request.user
+            p_form.name = request.user
             u_form.save()
             p_form.save()
         messages.success(request, f"Your account has been updated")
