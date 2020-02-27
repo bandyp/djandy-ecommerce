@@ -27,7 +27,7 @@ def contact(request):
             send_mail('New Enquiry', message, sender_email, ['enquiry@exampleco.com'])
             messages.success(request, "Thankyou for your request. We will be in touch shortly.")
             return render(request, 'message.html', {'form': form})
-    form = ContactForm(initial={'username': instance.get_username(), 'email': instance.email}, auto_id=False)
+    form = ContactForm(initial={'username': instance.get_username(), 'email': instance}, auto_id=False)
     print(form)       
     return render(request, 'contact.html', {'form': form})
 """    
