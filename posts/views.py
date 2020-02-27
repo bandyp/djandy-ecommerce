@@ -5,8 +5,7 @@ from django.http import HttpResponseForbidden, HttpResponse
 from .models import Post
 from .forms import BlogPostForm
 from django.contrib.auth.models import User
-from accounts.models import Profile
-from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm, UserUpdateForm
+from accounts.forms import UserLoginForm, UserRegistrationForm
 
 def get_posts(request):
     """

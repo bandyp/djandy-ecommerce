@@ -7,8 +7,7 @@ from django.http import HttpResponse
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.contrib import messages
-from accounts.models import Profile
-from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileUpdateForm, UserUpdateForm
+from accounts.forms import UserLoginForm, UserRegistrationForm
 
 
 
