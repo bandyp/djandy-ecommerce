@@ -17,9 +17,9 @@
         <div class="panel-body">
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
-                    <img src="{{ post.user.profile.image.url }}" class="img-circle">
+                    <img src="/media/{{ post.image }}" class="img-circle">
                 </a>
-                <p><span class="boldtext">Author:</span>{{ post.user }}</p>
+                <p><span class="boldtext">Author:</span>{{ post.author }}</p>
             </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.title }}</h3>

@@ -6,13 +6,7 @@
 {% block content %}
 <!-- shows template of a single full blog post -->
     <div class="row">
-        <div class="col-md-2 col-sm-3 text-center">
-            <a class="story-img" href="#">
-                <img src="{{ post.owner.profile.image.url }}" class="img-circle">
-            </a>
-            <p><span class="boldtext">Author:</span>{{ post.username }}</p>
-        </div>
-        
+
         <div class="col-sm-10 col-md-9">
             
             {% if post.image %}
@@ -22,13 +16,14 @@
             <h3>{{ post.title }}</h3>
             <div class="row">
                 <div class="col-xs-9 detail">
+                    <p><b>Author:</b> {{ post.author }}</p>
                     <p>{{ post.content }}</p>
                     <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                     <p><span class="boldtext">Views:</span> {{post.views}}</p>
                     <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
                     <a href="{% url 'get_posts' %}" class="btn btn-primary">Back to Blog</a>
             
-                    {% if user.is_authenticated and user == post.username or user.is_superuser %}
+                    {% if user.is_authenticated and user == post.author or user.is_superuser %}
                     <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit Post</a>
                     {% endif %}
             

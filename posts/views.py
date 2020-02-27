@@ -52,7 +52,7 @@ def create_or_edit_post(request, pk=None):
     create a view that allows to create or edit a post 
     """
     post = get_object_or_404(Post, pk=pk) if pk else None
-    if (request.user.is_authenticated and request.user == post.profile or request.user.is_superuser):
+    if (request.user.is_authenticated and request.user == post.author or request.user.is_superuser):
         if request.method == "POST":
             form = BlogPostForm(request.POST, request.FILES, instance=post)
             if form.is_valid():
