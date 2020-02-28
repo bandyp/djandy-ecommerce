@@ -1,5 +1,7 @@
 # Bali Silver
 
+https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master
+
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
 and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
 Presently, this is a fictional ecommerce site, where users can register/log in. They can buy jewellery; or read and post about the 
