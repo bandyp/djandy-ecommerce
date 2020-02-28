@@ -2,11 +2,14 @@
 
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
 and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
+Presently, this is a fictional ecommerce site, where users can register/log in. They can buy jewellery; or read and post about the 
+beautiful Indonesian island. 
 
 ## UX
 ![Bali Silver](#)
 
 Open on the home page, which gives a small taste of what the website offers, the user is invited register from a tab in the navigation bar. 
+The unregistered user can only view the products and the about us page. 
 After a seemless registration, all options appear at the top of the screen. Allowing the user to read blogs of fellow users and create their own. 
 They can contact the admin via the 'contact us' page, or read more about the company selling the products by clicking the 'About us" tab. 
 
@@ -15,7 +18,7 @@ Naturally, they can search and buy products too.
 [Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
 
 ## Users
-Anyone who is on the hunt for unique Balinese jewellery. 
+Anyone who is on the hunt for unique Balinese jewellery, especially those who have visited the tropical island before or perhaps want to in the future.
 
 ### User Stories
 A couple who may have visited Bali but didn't end up buying some silver jewellery can do so here knowing thats its authentic products.
@@ -40,16 +43,16 @@ Blog - Users can also add their experience in Bali, jewellery from Bali by using
 * [Balsamiq](https://www.balsamiq.com/wireframes/) - for the wireframe
 * [Git](https://www.git-scm.com/) - for version control
 * [GitHub](https://www.github.com/) - to host the repository
-* [GitHup Pages](https://www.pages.github.com/) - Website hosting.
 * [Heroku](https://www.heroku.com) - to deploy the app
-* [Flask-Pymongo](https://www.flask-pymongo.readthedocs.io/en/latest/) - for interaction with the front end
 * [Python](https://www.python.org/) - for back end implementation
 * [Bootstrap](https://www.getbootstrap.com/)
 * [Django](https://www.djangoproject.com/) - framework used to build the e commerce site
 * [stripe](https://www.stripe.com/gb/) - used for the payment system
-* [Travis](https://www.travis-ci.org/) - for testing
 
 ## Testing
+
+### Automated Tests
+
 
 ### Manual Tests
 * Chrome Developer Tools - to ensure all screen sizes responded correctly
@@ -74,6 +77,9 @@ To deploy your own version:
 Take a walk through the Bali Silver app [here](https://djandy_ecommerce.herokuapp.com/)
 
 ## Credits
-Code institue mentor Suen Owonikoko
 
-[![Build Status](https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master)](https://travis-ci.org/bandyp/djandy-ecommerce)
+### Content
+All descriptions of products were written by myself. The blog posts and pictures were cut from [bali.com](https://www.bali.com) and wikipedia. 
+
+### Acknowledgments
+Code institue mentor Suen Owonikoko and numerous tutors. 
