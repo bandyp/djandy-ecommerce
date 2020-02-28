@@ -1,6 +1,6 @@
 # Bali Silver
 
-https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master
+(https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master)
 
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
 and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
@@ -8,7 +8,7 @@ Presently, this is a fictional ecommerce site, where users can register/log in. 
 beautiful Indonesian island. 
 
 ## UX
-![Bali Silver](#)
+![Bali Silver](https://bandy-ecommerce.herokuapp.com/)
 
 Open on the home page, which gives a small taste of what the website offers, the user is invited register from a tab in the navigation bar. 
 The unregistered user can only view the products and the about us page. 
@@ -33,15 +33,15 @@ by visiting the Bali Silver website they can test their own market by purchasing
 
 ## Features
 Account setup - once the initial account is setup the user can then edit their details through the profile page.
-Admin - the super user can add go into the admin page to add/edit products and accounts
+Admin - the super user can go into the admin page to add/edit products and accounts. They are also able to edit any users blog posts, both from the admin panel or the website. 
 Cart - only when the user has registered and logged in can they add items to their cart.
 Payment system - Using stripe the user is invited to add card details for payment. They will recieve an email as confirmation.
-Blog - Users can also add their experience in Bali, jewellery from Bali by using this site to the blog page.
+Blog - Users can also add their experience in Bali, jewellery from Bali by using this site to the blog page. Editing posts can only be done by the authot or the superuser.
 
 ## Technology Used
 * [HTML](https://www.w3schools.com/html/) - for the structure of the content of the page
 * [CSS3](https://www.w3schools.com/css/) - for making small adjustments to the materialize framework
-* [Javascript](https://www.javascript.com/) - to initialise some components on the Materialize framework
+* [Javascript](https://www.javascript.com/) - to initialise some components on the Bootstrap framework
 * [Balsamiq](https://www.balsamiq.com/wireframes/) - for the wireframe
 * [Git](https://www.git-scm.com/) - for version control
 * [GitHub](https://www.github.com/) - to host the repository
@@ -54,6 +54,7 @@ Blog - Users can also add their experience in Bali, jewellery from Bali by using
 ## Testing
 
 ### Automated Tests
+Automated testing was done using Travis-CI. There is automated testing done for apps with views, models, and forms (where applicable). 
 
 
 ### Manual Tests
@@ -81,7 +82,7 @@ Take a walk through the Bali Silver app [here](https://djandy_ecommerce.herokuap
 ## Credits
 
 ### Content
-All descriptions of products were written by myself. The blog posts and pictures were cut from [bali.com](https://www.bali.com) and wikipedia. 
+All descriptions of products were written by myself. The blog posts and pictures were cut from [bali.com](https://www.bali.com) and wikipedia. Jewellery images were taken from the TJC website.
 
 ### Acknowledgments
-Code institue mentor Suen Owonikoko and numerous tutors. 
+Code institue mentor Suen Owonikoko and numerous tutors. Code for the authentication, registration process and payment system is based on the CI tutorials 
