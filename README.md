@@ -4,7 +4,7 @@
 
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
 and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
-Presently, this is a fictional ecommerce site, where users can register/log in. They can buy jewellery; or read and post about the 
+Presently, this is a fictional ecommerce site, where users can register/log in. They can go through the process to buy jewellery; or read and post about the 
 beautiful Indonesian island. 
 
 ## UX
@@ -78,6 +78,10 @@ To deploy your own version:
 * Click 'clone' to copy
 * Open your IDE
 * Type 'git clone https://github.com/bandyp/djandy_ecommerce.git' in the terminal window of the root directory
+
+As this is a fictional site, no actual card payments are processed. 
+Also, any emails sent to the user are sent to teh console instead. The links are available in the console.
+
 
 Take a walk through the Bali Silver app [here](https://bandy-ecommerce.herokuapp.com/)
 
