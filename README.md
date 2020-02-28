@@ -1,6 +1,6 @@
 # Bali Silver
 
-(https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master)
+[![Build Status](https://travis-ci.org/bandyp/djandy-ecommerce.svg?branch=master)](https://travis-ci.org/bandyp/djandy-ecommerce)
 
 After spending our honeymoon in Bali and seeing all the fantastic crafts Bali has to offer. My wife and I thought about importing
 and selling some of the more unique items. Particularly the world renowned silver jewellery which we watched being hand crafted in Bali. 
@@ -8,7 +8,7 @@ Presently, this is a fictional ecommerce site, where users can register/log in. 
 beautiful Indonesian island. 
 
 ## UX
-![Bali Silver](https://bandy-ecommerce.herokuapp.com/)
+[Bali Silver](https://bandy-ecommerce.herokuapp.com/)
 
 Open on the home page, which gives a small taste of what the website offers, the user is invited register from a tab in the navigation bar. 
 The unregistered user can only view the products and the about us page. 
