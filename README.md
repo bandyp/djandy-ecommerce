@@ -17,7 +17,7 @@ They can contact the admin via the 'contact us' page, or read more about the com
 
 Naturally, they can search and buy products too.
 
-![Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
+[Click here](UXdesign/BaliSilverWireframes.pdf) to see the mock ups.
 
 ## Users
 Anyone who is on the hunt for unique Balinese jewellery, especially those who have visited the tropical island before or perhaps want to in the future.
