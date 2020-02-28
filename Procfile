@@ -1,0 +1,1 @@
+web: gunicorn djandy_ecommerce.wsgi:application
