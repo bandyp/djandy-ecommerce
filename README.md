@@ -17,7 +17,7 @@ They can contact the admin via the 'contact us' page, or read more about the com
 
 Naturally, they can search and buy products too.
 
-[Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
+![Click here](media/img/BaliSilverWireframes.pdf) to see the mock ups.
 
 ## Users
 Anyone who is on the hunt for unique Balinese jewellery, especially those who have visited the tropical island before or perhaps want to in the future.
@@ -79,7 +79,7 @@ To deploy your own version:
 * Open your IDE
 * Type 'git clone https://github.com/bandyp/djandy_ecommerce.git' in the terminal window of the root directory
 
-Take a walk through the Bali Silver app [here](https://djandy_ecommerce.herokuapp.com/)
+Take a walk through the Bali Silver app [here](https://bandy-ecommerce.herokuapp.com/)
 
 ## Credits
 
