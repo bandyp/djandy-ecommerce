@@ -61,13 +61,15 @@ Automated testing was done using Travis-CI. There is automated testing done for 
 * Chrome Developer Tools - to ensure all screen sizes responded correctly
 * W3C HTML & CSS Validation - used to test HTML and CSS
 
+A lot of manual testing was done for registration, blog details, cart, payments system and logging out. 
+
 ## Deployment
 The app was developed using AWS Cloud9. The git repository was initiated through 
 the bash terminal and regular commits were made after each piece of development. 
 The project was then deployed to Heroku through the following steps.
 
-* Created new app titled "postal-hazards-uk"
-* The repository was cloned by using: heroku git:clone -a postal-hazards-uk
+* Created new app titled "bandy-ecommerce"
+* The repository was cloned by using: heroku git:clone -a bandy-ecommerce
 * A requirments file and procfile was added
 * The Git repository was added using: git push heroku master
 
